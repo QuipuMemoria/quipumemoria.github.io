@@ -231,20 +231,28 @@
         </div>
     </div>
 
-    <header class="fixed w-full z-50 transition-all duration-300 glass-light shadow-sm">
+
+
+<header class="fixed w-full z-50 transition-all duration-300 glass-light shadow-sm">
         <div class="tocapu-border w-full"></div>
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-xl font-andean text-gray-900 tracking-widest flex items-center gap-2">
-                <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2.5 11.5L12 21L21.5 11.5L12 2Z M12 5L18.5 11.5L12 18L5.5 11.5L12 5Z" /></svg>
+        <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="text-2xl font-andean text-gray-900 tracking-widest flex items-center gap-2">
+                <!-- ÍCONO CORREGIDO: Rombo andino -->
+                <svg class="w-6 h-6 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2.5 11.5L12 21L21.5 11.5L12 2Z M12 5L18.5 11.5L12 18L5.5 11.5L12 5Z" />
+                </svg>
                 QUIPU <span class="text-gold font-bold">MEMORIA</span>
             </div>
             
-            <div class="hidden md:flex space-x-8 text-xs uppercase tracking-[0.2em] font-bold text-gray-500">
+            <!-- Menú Escritorio -->
+            <div class="hidden md:flex space-x-12 text-xs uppercase tracking-[0.2em] font-bold text-gray-500">
+                <!-- Aquí está el nuevo enlace -->
+                <a href="#bio" class="hover:text-yellow-600 transition-colors duration-300">Sobre Mí</a> 
                 <a href="#galeria" class="hover:text-yellow-600 transition-colors duration-300">Colección</a>
-                <a href="#contacto" class="hover:text-yellow-600 transition-colors duration-300">Quipu a Medida</a>
-                <a href="#contacto-footer" class="hover:text-yellow-600 transition-colors duration-300">Contacto</a>
+                <a href="#contacto" class="hover:text-yellow-600 transition-colors duration-300">Contacto</a>
             </div>
 
+             <!-- Botón Menú Móvil -->
             <div class="md:hidden">
                 <button id="mobile-menu-btn" class="text-gray-900 focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -252,10 +260,12 @@
             </div>
         </nav>
         
+        <!-- Menú Móvil Desplegable -->
         <div id="mobile-menu" class="hidden md:hidden bg-[#fdfbf7] border-t border-gray-200 p-4 absolute w-full shadow-lg">
+            <!-- Aquí también está el nuevo enlace -->
+            <a href="#bio" class="block py-2 text-sm uppercase tracking-widest text-gray-600 hover:text-yellow-600">Sobre Mí</a>
             <a href="#galeria" class="block py-2 text-sm uppercase tracking-widest text-gray-600 hover:text-yellow-600">Colección</a>
-            <a href="#contacto" class="block py-2 text-sm uppercase tracking-widest text-gray-600 hover:text-yellow-600">Quipu a Medida</a>
-            <a href="#contacto-footer" class="block py-2 text-sm uppercase tracking-widest text-gray-600 hover:text-yellow-600">Contacto</a>
+            <a href="#contacto" class="block py-2 text-sm uppercase tracking-widest text-gray-600 hover:text-yellow-600">Contacto</a>
         </div>
     </header>
 
@@ -278,6 +288,38 @@
                 <a href="#contacto" class="btn-secondary-andean px-10 py-3 font-bold text-xs hover:shadow-md">
                     Quipu a medida
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NUEVA: Biografía / Sobre el Artista -->
+    <section id="bio" class="py-24 px-6 bg-white relative border-b border-gray-100">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            
+            <!-- Foto del Artista -->
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-yellow-600/20 shadow-2xl">
+                    <!-- REEMPLAZA ESTA FOTO POR LA TUYA (ej: 'mi-foto.jpg') -->
+                    <img src="https://placehold.co/600x600/e5e5e5/333333?text=Foto+Artista" alt="El Artista" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Texto Biografía -->
+            <div class="w-full md:w-1/2 text-center md:text-left">
+                <div class="mb-4 inline-block border-b-2 border-yellow-600 pb-1">
+                    <span class="text-yellow-700 font-andean text-sm tracking-[0.2em] uppercase font-bold">El Artista</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl text-gray-900 mb-6 font-andean">Recuperando el lenguaje perdido</h2>
+                <p class="text-gray-600 font-serif italic text-lg mb-6 leading-relaxed">
+                    "Mi trabajo busca reinterpretar el sistema de comunicación de los Incas para el mundo moderno. No como un objeto del pasado, sino como una herramienta viva para registrar nuestras propias historias."
+                </p>
+                <p class="text-gray-500 font-light text-base leading-relaxed mb-8">
+                    Soy un artista textil apasionado por la historia andina. A través de la investigación y la experimentación con fibras naturales, creo piezas que conectan la memoria ancestral con la estética contemporánea. Cada nudo es una palabra, cada color una emoción.
+                </p>
+                <!-- Firma o Redes -->
+                <div class="flex justify-center md:justify-start gap-4">
+                    <a href="https://instagram.com/quipumemoria" target="_blank" class="text-yellow-600 hover:text-gray-900 transition-colors font-bold text-sm tracking-widest uppercase">Sígueme en Instagram →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -331,20 +373,8 @@
                     <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
                     <input type="email" name="email" placeholder="Email" required>
                 </div>
-
                 <div class="input-group">
-                    <select name="tema" required>
-                        <option value="" disabled selected>Tema Principal del Quipu</option>
-                        <option value="interes">Un tema de interés</option>
-                        <option value="vida">La historia de mi vida</option>
-                        <option value="amor">Mi historia de amor con mi pareja</option>
-                        <option value="viajes">Recuerdo de mis viajes</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-
-                <div class="input-group">
-                    <textarea name="mensaje" rows="5" placeholder="Cuéntame brevemente la historia o fecha que quieres registrar..." required></textarea>
+                    <textarea name="mensaje" rows="5" placeholder="Cuéntame brevemente la historia o tema que quisieras anudar en tu quipu. Por ejemplo: un tema de interés, la historia de mi vida, mi historia de amor con mi pareja, un resumen de mis viajes, etc " required></textarea>
                 </div>
 
                 <button type="submit" class="btn-enviar">Enviar Solicitud</button>
@@ -387,8 +417,8 @@
         // --- DATA DE TUS OBRAS ---
         const obras = [
             {
-                id: "memoria-planeta",
-                title: "Memoria del planeta",
+                id: "memoria-planeta1",
+                title: "Memoria del planeta tierra (1)",
                 subtitle: "Hilos 100% algodón",
                 desc: "56 fechas que afectaron el medio ambiente desde 1886 hasta el 2025",
                 price: "$100 USD",
@@ -401,6 +431,36 @@
                 title: "Memoria del Perú",
                 subtitle: "Hilos 100% algodón",
                 desc: "Este quipu narra la historia del Perú desde el Virreinato hasta 2025",
+                price: "$100 USD",
+                specs: ["100% Algodón", "Medida: 30cm x 40cm", "entregado enmarcado"],
+                images: ["obraquipuperu1.png", "obraquipuperu2.png"],                
+                status: "Disponible"
+            },
+             {
+                id: "memoria-planeta2",
+                title: "Memoria del planeta tierra (2)",
+                subtitle: "Hilos 100% algodón",
+                desc: "56 fechas que afectaron el medio ambiente desde 1886 hasta el 2025",
+                price: "$100 USD",
+                specs: ["100% Algodón", "Medida: 30cm x 40cm", "entregado enmarcado"],
+                images: ["obraquipuplaneta1.png", "obraquipuplaneta2.png"],                
+                status: "Disponible"
+            },
+            {
+                id: "memoria-mujeres-latinoamericas",
+                title: "Memoria de mujeres latinoamericanas",
+                subtitle: "Hilos 100% algodón",
+                desc: "Este quipu narra la historia mujeres latinoamericanas que marcaron el feminismo.",
+                price: "$100 USD",
+                specs: ["100% Algodón", "Medida: 30cm x 40cm", "entregado enmarcado"],
+                images: ["obraquipuperu1.png", "obraquipuperu2.png"],                
+                status: "Disponible"
+            },
+            {
+                id: "memoria-cine-blanco-negro",
+                title: "Memoria del cine en blanco y negro",
+                subtitle: "Hilos 100% algodón",
+                desc: "Este quipu narra la historia del de las peliculas en blanco y negro que marcaron el cinema.",
                 price: "$100 USD",
                 specs: ["100% Algodón", "Medida: 30cm x 40cm", "entregado enmarcado"],
                 images: ["obraquipuperu1.png", "obraquipuperu2.png"],                
@@ -497,5 +557,3 @@
     </script>
 </body>
 </html>
-
-
